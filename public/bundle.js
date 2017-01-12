@@ -57,8 +57,8 @@
 
 	var Main = __webpack_require__(222);
 	var Weather = __webpack_require__(224);
-	var About = __webpack_require__(225);
-	var Examples = __webpack_require__(226);
+	var About = __webpack_require__(226);
+	var Examples = __webpack_require__(227);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -25456,7 +25456,8 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(159),
-	    Link = _require.Link;
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
 
 	var Nav = React.createClass({
 		displayName: 'Nav',
@@ -25471,7 +25472,7 @@
 					'Nav'
 				),
 				React.createElement(
-					Link,
+					IndexLink,
 					{ to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 					'Get Weather'
 				),
@@ -25498,15 +25499,21 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var WeatherForm = __webpack_require__(225);
 
 	var Weather = React.createClass({
 		displayName: 'Weather',
 
 		render: function render() {
 			return React.createElement(
-				'h3',
+				'div',
 				null,
-				'Weather Component'
+				React.createElement(
+					'h3',
+					null,
+					'Weather Component'
+				),
+				React.createElement(WeatherForm, null)
 			);
 		}
 	});
@@ -25515,6 +25522,37 @@
 
 /***/ },
 /* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var WeatherForm = React.Form = React.createClass({
+		displayName: "Form",
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"form",
+					null,
+					React.createElement("input", { type: "text" }),
+					React.createElement(
+						"button",
+						null,
+						"Get Weather"
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = WeatherForm;
+
+/***/ },
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25536,7 +25574,7 @@
 	module.exports = About;
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

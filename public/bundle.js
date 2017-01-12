@@ -57,8 +57,8 @@
 
 	var Main = __webpack_require__(222);
 	var Weather = __webpack_require__(224);
-	var About = __webpack_require__(226);
-	var Examples = __webpack_require__(227);
+	var About = __webpack_require__(227);
+	var Examples = __webpack_require__(228);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -25500,6 +25500,7 @@
 
 	var React = __webpack_require__(1);
 	var WeatherForm = __webpack_require__(225);
+	var WeatherMessage = __webpack_require__(226);
 
 	var Weather = React.createClass({
 		displayName: 'Weather',
@@ -25513,7 +25514,8 @@
 					null,
 					'Weather Component'
 				),
-				React.createElement(WeatherForm, null)
+				React.createElement(WeatherForm, null),
+				React.createElement(WeatherMessage, null)
 			);
 		}
 	});
@@ -25559,6 +25561,28 @@
 
 	var React = __webpack_require__(1);
 
+	var WeatherMessage = React.createClass({
+		displayName: 'WeatherMessage',
+
+		render: function render() {
+			return React.createElement(
+				'h3',
+				null,
+				'It\'s 0 degrees'
+			);
+		}
+	});
+
+	module.exports = WeatherMessage;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
 	var About = React.createClass({
 		displayName: 'About',
 
@@ -25574,7 +25598,7 @@
 	module.exports = About;
 
 /***/ },
-/* 227 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -1,6 +1,9 @@
 var React = require('react');
 
 var ErrorModal = React.createClass({
+	getDefaultProps: function () {
+		
+	}
 	componentDidMount: function () {
          var modal = new Foundation.Reveal($('#error-modal'));
          modal.open();
